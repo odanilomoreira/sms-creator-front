@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import './Home.css'
+import './Header.css'
 
-function Home() {
+function Header({ selected }) {
     const [accessToken, setAccessToken] = useState("")
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
+  
 
     useEffect(() => {
         setAccessToken(localStorage.getItem("access_token"))
@@ -13,11 +14,12 @@ function Home() {
     },[])
 
     return (
-        <div className='home'>
-            <h1>Hello {localStorage.getItem("access_token") ? username : "Guest"}</h1>
-            <h2>{localStorage.getItem("access_token") ? email : ""}</h2>
+        <div className='header'>
+             <h1>{selected ? selected : "Dashboard"}</h1>
+            <p>Hello {localStorage.getItem("access_token") ? username : "Guest"}</p>
+            <p>{localStorage.getItem("access_token") ? email : ""}</p>
         </div>
     )
 }
 
-export default Home
+export default Header

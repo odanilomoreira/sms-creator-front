@@ -11,6 +11,7 @@ function Login() {
     const history = useHistory()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
 
     useEffect(() => {
         if (localStorage.getItem("access_token")) {
@@ -30,7 +31,8 @@ function Login() {
             localStorage.setItem("email", email)
             history.push('/')
         }catch (error) {
-            alert(error.response.data.message)
+            setError(error.response.data.message)
+            console.log('error', error.response.data.message)
         }
         
     }
@@ -48,7 +50,7 @@ function Login() {
             <div className="login__container">
                 <form>
                     <img src={vendorLogin} />
-                    
+                    <p className="login__error">{error}</p>
                     <p>E-mail Address:</p>
                     <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
@@ -62,6 +64,9 @@ function Login() {
                     <button type='submit' onClick={signIn} className='login__signInButton'>sign in</button>
                     <Link to='/forgot'>
                         <span className="login__x-small" onClick={forgot}>Forgot your password?</span>
+                    </Link>
+                    <Link to='/register'>
+                        <span className={`login__x-small login__register`}>Register</span>
                     </Link>
                 </form>
             </div>

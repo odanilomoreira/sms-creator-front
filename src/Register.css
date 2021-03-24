@@ -1,4 +1,4 @@
-.login {
+.register {
     background-color:  #0C2633;
     display: flex;
     flex: 1;
@@ -8,11 +8,11 @@
     align-items: center;
 }
 
-.login__container > form > p {
+.register__container > form > p {
     margin-top: 8px;
 }
 
-.login__container > form > input {
+.register__container > form > input {
     display: flex;
     background-color: #0C2633;
     border: 1px solid #7E7E7E;
@@ -22,13 +22,13 @@
     border-radius: 2px;
 }
 
-.login__rememberMe {
+.register__rememberMe {
     display: flex;
     align-items: center;
     margin-top: 5px;
 }
 
-.login__container > form > button {
+.register__container > form > button {
     display: flex;
     width: 100%;
     padding: 8px;
@@ -42,25 +42,16 @@
     opacity: 0.9;
 }
 
-.login__error {
-    color: #E65E60;
-}
-
-.login__x-small {
+.register__x-small{
     font-size: 9pt;
     font-weight: lighter;
 }
 
-.login__register {
-    margin-top: 10px;
-    opacity: 0.6;
-}
-
-.login__container > form > button:hover {
+.register__container > form > button:hover {
     opacity: 1;
 }
 
-.login__container > form > a {
+.register__container > form > a {
     display: flex;
     justify-content: center;
     margin-top: 5px;
@@ -68,12 +59,12 @@
     margin-top: 10px;
 }
 
-.login__container > form > a:hover {
+.register__container > form > a:hover {
     opacity: 1;
 }
 
 
-.login__rememberMe > input {
+.register__rememberMe > input {
     height: 12px;
     width: 12px;
     -webkit-appearance: none;
@@ -89,17 +80,17 @@
     cursor: pointer;
   }
 
-  .login__rememberMe > input:checked {
+  .register__rememberMe > input:checked {
     border: 1px solid #EFEFEF;
     background-color: #E65E60;
 }
 
-.login__header {
+.register__header {
     display: flex;
     background-color: #0C2633;
 }
 
-.login__header > img {
+.register__header > img {
     display: flex;
     margin-left: -600px;
     margin-bottom: 74px;
@@ -108,14 +99,14 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .login__header > img {
+    .register__header > img {
         margin-left: -400px;
     }
   }
 
 
 @media screen and (max-width: 900px) {
-    .login__header > img {
+    .register__header > img {
         margin-left: 0;
     }
   }
