@@ -7,14 +7,14 @@ function Dashboard() {
         <div className='dashboard'>
             <div className="dashboard__cardWrapper">
                 <Card 
-                cardTitle="Card Title"
-                bodyTitle="Card Body"
+                cardTitle="Pick SMS"
+                bodyTitle="Current Message"
                 />
             </div>
             <div className="dashboard__cardWrapper">
                 <Card 
-                cardTitle="Second Card Title"
-                bodyTitle="Second Card Body"
+                cardTitle="Delivery SMS"
+                bodyTitle="Current Message"
                 />
             </div>
         </div>

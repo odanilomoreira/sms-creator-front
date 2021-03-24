@@ -17,9 +17,29 @@
     padding-left: 1em;
 }
 
+.card__header > h1 {
+    font-size: 16pt;
+}
+
+.card__container > h3 {
+    font-size: 14pt;
+}
+
+.card__container > span {
+    display: flex;
+    flex-direction: column;
+    color: #7E7E7E;
+    align-items: flex-end;
+    opacity: 0.7;
+}
+
+.card__add > strong {
+    font-size: 12pt;
+}
+
 .card__container {
     padding: 20px;
-    height: 20em;
+    height: 28em;
 }
 
 .card__body > textarea {
@@ -32,15 +52,19 @@
     resize: none;
   }
 
+  .card__body > textarea:focus {
+      outline: none !important;
+      border: 2px solid #7E7E7E;
+  }
   .card__addItems {
       display: flex;
   }
 
   .card__addItems > *{
-      background-color: #ccc;
+      background-color: #efefef;
       margin-left: 5px;
-      padding: 5px;
-      border-radius: 10px;
+      padding: 3px;
+      border-radius: 5px;
       cursor: pointer;
   }
 
