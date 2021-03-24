@@ -83,3 +83,29 @@
     border: 1px solid #EFEFEF;
     background-color: #E65E60;
 }
+
+.login__header {
+    display: flex;
+    background-color: #0C2633;
+}
+
+.login__header > img {
+    display: flex;
+    margin-left: -600px;
+    margin-bottom: 74px;
+    margin-top: 20px;
+    width: 120px;
+}
+
+@media screen and (max-width: 1200px) {
+    .login__header > img {
+        margin-left: -400px;
+    }
+  }
+
+
+@media screen and (max-width: 900px) {
+    .login__header > img {
+        margin-left: 0;
+    }
+  }

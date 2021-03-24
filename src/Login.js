@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom'
 import './Login.css'
 import vendorLogin from './vendor_login.jpg';
 import axios from 'axios'
+import pvmtLogo from './pvmt_logo.jpg'
 
 const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
 
@@ -26,6 +27,7 @@ function Login() {
             
             localStorage.setItem("access_token", res.data.access_token)
             localStorage.setItem("username", res.data.username)
+            localStorage.setItem("email", email)
             history.push('/')
         }catch (error) {
             alert(error.response.data.message)
@@ -40,6 +42,9 @@ function Login() {
 
     return (
         <div className='login'>
+            <div className="login__header">
+                <img src={pvmtLogo} />
+            </div>
             <div className="login__container">
                 <form>
                     <img src={vendorLogin} />
