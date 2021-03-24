@@ -1,16 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import './Login.css'
 import vendorLogin from './vendor_login.jpg';
+import axios from 'axios'
+
+const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
 
 function Login() {
     const history = useHistory()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    useEffect(() => {
+        if (localStorage.getItem("access_token")) {
+          history.push("/");
+        }
+      }, [history])
     
-    const signIn = e => {
+    const signIn = async e => {
         e.preventDefault()
-        console.log('Sign In',email,password)
+        const headers = { header: { "Content-Type": "application/json"} }
+        try {
+            const res = await api.post('/login', {"email": email, "password": password}, headers)
+            // console.log(res.data.access_token)
+            
+            localStorage.setItem("access_token", res.data.access_token)
+            localStorage.setItem("username", res.data.username)
+            history.push('/')
+        }catch (error) {
+            alert(error.response.data.message)
+        }
+        
     }
 
     const forgot = e => {
