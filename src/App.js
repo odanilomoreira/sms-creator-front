@@ -1,10 +1,14 @@
-import './App.css';
+import './App.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Login from './Login'
 
 function App() {
   return (
-    <div className="app">
-      <h1>Let's begin!</h1>
-    </div>
+    <Router>
+      <div className="app">
+        <Login />
+      </div>
+    </Router>
   );
 }
 
