@@ -1,4 +1,16 @@
 .dashboard {
     display: flex;
     height: 92.4vh;
+    flex-wrap: wrap;
+    background-color: #EFEFEF;
+    align-items: top;
+    justify-content: center;
+}
+
+.dashboard > * {
+    flex: 1 1 8em;
+    flex-basis: 100%;
+    max-width: 25em;
+    margin: 0.5em;
+    margin-top: 1em;
 }

@@ -1,0 +1,90 @@
+.card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.card__header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    flex: 1;
+    background-color: #0C2633;
+    color: #EFEFEF;
+    padding: 5px;
+    padding-left: 1em;
+}
+
+.card__container {
+    padding: 20px;
+    height: 20em;
+}
+
+.card__body > textarea {
+    width: 100%;
+    height: 75px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  .card__addItems {
+      display: flex;
+  }
+
+  .card__addItems > *{
+      background-color: #ccc;
+      margin-left: 5px;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+
+  .card__addItems > *:hover {
+      background-color: rgb(218, 216, 216);
+  }
+
+  .card__add {
+      display: flex;
+  }
+
+  .card__add > strong{
+    margin-right: 20px;
+}
+
+.card__buttonsWrapper {
+    margin-top: 1em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.card__buttonsWrapper > button {
+    padding: 5px;
+    width: 5em;
+    font-weight: 500;
+    color: #EFEFEF;
+    cursor: pointer;
+    opacity: 0.7;
+    border-radius: 5px;
+    border: none;
+}
+
+.card__cancelButton {
+    background-color: #7E7E7E;
+}
+
+.card__saveButton {
+    background-color: red;
+}
+
+.card__cancelButton:hover {
+    opacity: 0.9;
+}
+
+.card__saveButton:hover {
+    opacity: 0.9;
+}
