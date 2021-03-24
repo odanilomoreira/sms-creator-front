@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    background-color: #0C2633;
+}
+
+.header > img {
+    display: flex;
+    margin-left: 120px;
+    margin-bottom: 80px;
+}
