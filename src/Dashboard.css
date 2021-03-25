@@ -9,7 +9,7 @@
 .dashboard__cards > * {
     flex: 1 1 8em;
     flex-basis: 100%;
-    max-width: 25em;
+    max-width: 51em;
     margin: 0.5em;
     margin-top: 1em;
     min-width: 400px;
@@ -26,4 +26,8 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+.dashboard__card {
+
 }

@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 
-.header__option > .MuiSvgIcon-root {
+.header__option > .header__optionButtonWrapper > .MuiSvgIcon-root {
     color: #EFEFEF;
     background-color: #0C2633;
     padding: 6px;
@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-.header__option > .MuiSvgIcon-root:hover {
+.header__option > .header__optionButtonWrapper > .MuiSvgIcon-root:hover {
     opacity: 0.85;
 }
 
@@ -53,10 +53,20 @@
     cursor: pointer;
 }
 
+.header > .header__option > h1 {
+    display: flex;   
+}
+
 .header__optionWrapper {
     display: flex;
-    align-items: center;
+
 }
+
+.header__optionButtonWrapper {
+    display: flex;
+
+}
+
 
 .header__optionColOne {
     display: flex;

@@ -1,0 +1,29 @@
+.settings {
+    display: flex;
+    height: 92.4vh;
+    background-color: #EFEFEF;
+    align-items: top;
+    justify-content: center;
+}
+
+.settings__cards > * {
+    flex: 1 1 8em;
+    flex-basis: 100%;
+    max-width: 51em;
+    margin: 0.5em;
+    margin-top: 1em;
+    min-width: 400px;
+}
+
+.settings__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.settings__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

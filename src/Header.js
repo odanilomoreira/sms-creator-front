@@ -32,7 +32,9 @@ function Header({ selected }) {
             </div>
 
             <div className="header__option">
-                <PowerSettingsNewIcon />
+                <div className="header__optionButtonWrapper">
+                    <PowerSettingsNewIcon />
+                </div>
             </div>
         </div>
     )
