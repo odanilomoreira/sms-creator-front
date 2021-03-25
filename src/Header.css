@@ -1,5 +1,74 @@
 .header {
-    background-color: aqua;
+    background-color: white;
     display: flex;
     height: 50px;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.header__option > h1 {
+    margin-left: 10px;
+    font-size: 17pt;
+    font-weight: 600;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.header__optionLineOne {
+    font-weight: bold;
+}
+
+.header__option > .MuiSvgIcon-root {
+    color: #EFEFEF;
+    background-color: #0C2633;
+    padding: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    margin-top: 0.8em;
+    cursor: pointer;
+}
+
+.header__option > .MuiSvgIcon-root:hover {
+    opacity: 0.85;
+}
+
+.header__messageCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EFEFEF;
+    background-color: #E65E60;
+    padding: 10px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header__optionWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__optionColOne {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header__optionColTwo {
+    display: flex;
+    margin-left: 1.5em;
+}
+
+.header__messageCount:hover {
+    opacity: 0.85;
 }

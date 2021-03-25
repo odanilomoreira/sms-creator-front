@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
 function Header({ selected }) {
     const [accessToken, setAccessToken] = useState("")
@@ -15,9 +16,24 @@ function Header({ selected }) {
 
     return (
         <div className='header'>
-             <h1>{selected ? selected : "Dashboard"}</h1>
-            <p>Hello {localStorage.getItem("access_token") ? username : "Guest"}</p>
-            <p>{localStorage.getItem("access_token") ? email : ""}</p>
+            <div className="header__option">
+                <h1>{selected ? selected : "Dashboard"}</h1>
+            </div>
+            <div className="header__option">
+                <div className="header__optionWrapper">
+                    <div className="header__optionColOne">
+                        <span className="header__optionLineOne">{localStorage.getItem("access_token") ? username : "Guest"}</span>
+                        <span className="header__optionLineTwo">{localStorage.getItem("access_token") ? email : ""}</span>
+                    </div>
+                    <div className="header__optionColTwo">
+                        <div className="header__messageCount">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="header__option">
+                <PowerSettingsNewIcon />
+            </div>
         </div>
     )
 }

@@ -22,8 +22,8 @@ function Card({ cardTitle, bodyTitle, currentMessage }) {
                         <div className="card__add"><strong>Add</strong>
                         <div className="card__addItems">
                         <span>Due Time</span>
-                        <span>Resta</span>
-                        <span>Due Time</span>
+                        <span>Restaurant Name</span>
+                        <span>Customer Name</span>
                         </div>
                         </div>
                         <div className="card__buttonsWrapper">
