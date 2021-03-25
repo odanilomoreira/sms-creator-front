@@ -13,10 +13,12 @@ function Dashboard() {
                     <Card 
                     cardTitle="Pick SMS"
                     bodyTitle="Current Message"
+                    currentMessage="Hey there! Your order will be ready to pickup at 123 This Street. See you soon!"
                     />
                     <Card 
                     cardTitle="Delivery SMS"
                     bodyTitle="Current Message"
+                    currentMessage="Hey there! Your order will be delivered shortly. See you soon!"
                     />
                 </div>
             </div>            

@@ -8,11 +8,6 @@ import { IconButton } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
-    const isActive = () => {
-        console.log('clicked')
-    }
-
-
     return (
         <div className='sidebar'>
             <img src={dashIcon} />

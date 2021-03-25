@@ -5,6 +5,7 @@
     color: #EFEFEF;
     border-radius: 8px;
     height: 35px;
+    max-height: 35px;
     padding: 0.5em;
     max-width: 50em;
     margin-left: 10px;
