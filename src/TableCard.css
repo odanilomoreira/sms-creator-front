@@ -1,0 +1,47 @@
+.tableCard {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.tableCard__header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    flex: 1;
+    background-color: #0C2633;
+    color: #EFEFEF;
+    padding: 5px;
+    padding-left: 1em;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+}
+
+.tableCard__header > * {
+    font-size: 12pt;
+    flex-basis: 100%;
+}
+
+.tableCard__container {
+    height: 27em;
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    padding-left: 1em;
+    justify-content: space-evenly;
+
+}
+
+.tableCard__container > * {
+    flex-basis: 100%;
+}
+
+.tableCard__nameAndEmail {
+
+}
+
+.tableCard__nameAndEmail > * {
+
+}

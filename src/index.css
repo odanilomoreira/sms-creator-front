@@ -36,6 +36,7 @@ p, span, label {
 
 a {
   color: #EFEFEF;
+  text-decoration: none;
 }
 
 code {

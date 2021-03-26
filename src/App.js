@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom'
 import Login from './Login'
 import Sidebar from './Sidebar'
 import Header from './Header'
@@ -7,8 +7,11 @@ import Dashboard from './Dashboard'
 import Messages from './Messages'
 import Settings from './Settings'
 import Register from './Register'
+import React, { useState } from 'react'
+import HistorySMS from './HistorySMS'
 
 function App() {
+ 
   return (
     <Router>
       <div className="app">
@@ -18,6 +21,14 @@ function App() {
           </Route>
           <Route path='/login'>
             <Login />
+          </Route>
+          <Route path='/sms-history'>
+            
+            <Sidebar />
+            <div className="app__wrapper">
+              <Header />
+              <HistorySMS />
+            </div>
           </Route>
           <Route path='/dashboard'>
             <Sidebar />

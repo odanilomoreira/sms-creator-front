@@ -29,6 +29,8 @@ function Login() {
             localStorage.setItem("access_token", res.data.access_token)
             localStorage.setItem("username", res.data.username)
             localStorage.setItem("email", email)
+            localStorage.setItem("restaurant_id", res.data.restaurant_id)
+            console.log('restaurant_id',res.data.restaurant_id)
             history.push('/')
         }catch (error) {
             setError(error.response.data.message)

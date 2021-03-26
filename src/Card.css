@@ -30,7 +30,7 @@
     font-size: 14pt;
 }
 
-.card__container > span, .card__settings > span {
+.card__bodyWrapper > span, .card__settings > span {
     display: flex;
     flex-direction: column;
     color: #7E7E7E;

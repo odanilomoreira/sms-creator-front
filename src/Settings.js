@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Settings.css'
 import Card from './Card'
 import Section from './Section'
+import axios from 'axios'
 
-function Settings() {
+const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+
+function Settings() {  
     return (
         <div className='settings'>
             <div className="settings__container">
@@ -12,8 +15,8 @@ function Settings() {
                     
                     <Card 
                     cardTitle="Secret ID"
-                    currentSecretID="123123441234451"
-                    hideBody
+                    currentSecretID={localStorage.getItem('restaurant_id')}
+                    hideBody showSettings
                     />
                     
                 </div>

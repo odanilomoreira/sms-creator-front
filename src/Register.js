@@ -11,6 +11,7 @@ function Register() {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [restaurantID, setRestaurantID] = useState('')
 
     useEffect(() => {
         if (localStorage.getItem("access_token")) {
@@ -22,7 +23,10 @@ function Register() {
         e.preventDefault()
         const headers = { header: { "Content-Type": "application/json"} }
         try {
-            const res = await api.post('/register', {"username": username, "email": email, "password": password}, headers)
+            const res = await api.post('/register', {"username": username, 
+                                                    "email": email, 
+                                                    "password": password,
+                                                     "restaurant_id": restaurantID}, headers)
             // console.log(res.data.access_token)
             console.log(res)
             history.push('/')
@@ -48,6 +52,9 @@ function Register() {
 
                     <p>Password:</p>
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+
+                    <p>Restaurant ID:</p>
+                    <input type="password" value={restaurantID} onChange={e => setRestaurantID(e.target.value)} />
                                         
                     <button type='submit' onClick={signIn} className='register__signInButton'>register</button>
                     

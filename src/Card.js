@@ -2,14 +2,23 @@ import React, { useState } from 'react'
 import './Card.css'
 import InputMask from "react-input-mask";
 
-function Card({ cardTitle, bodyTitle, currentMessage, currentSecretID, hideBody, hideButtons, showText }) {
+function Card({ cardTitle, 
+                bodyTitle, 
+                currentMessage, 
+                currentSecretID, 
+                hideBody, 
+                hideButtons, 
+                showText, 
+                showSettings }) {
     const [message, setMessage] = useState(currentMessage ? currentMessage : "")
     const [secretID, setSecretID] = useState(currentSecretID ? currentSecretID : "")
-    const handleSave = e => {
+    
+    const handleCLear = e => {
         e.preventDefault()
+        setSecretID("")
     }
 
-    const handleCancel = e => {
+    const handleSave = e => {
         e.preventDefault()
     }
 
@@ -22,7 +31,7 @@ function Card({ cardTitle, bodyTitle, currentMessage, currentSecretID, hideBody,
                     {!hideBody && (
                         <div className="card__bodyWrapper">
                         
-                        <div className="card__body"><textarea value={message} onChange={e => setMessage(e.target.value)} /></div>
+                        <div className="card__body"><textarea maxlength="140" value={message} onChange={e => setMessage(e.target.value)} /></div>
                     
                         <span>Characters: {message.length ? message.length : '0'}</span>
                         
@@ -45,17 +54,19 @@ function Card({ cardTitle, bodyTitle, currentMessage, currentSecretID, hideBody,
                                 <p>Thanks!</p>
                             </div>
                         )}
+                        {showSettings && (
+                            <div className="card__settings">
+                                <p>Restaurant Secret ID</p>
+                                <div className="card__body"><input value={secretID} onChange={e => setSecretID(e.target.value)} /></div>
+                                <span>Characters: {secretID.length ? secretID.length : '0'}</span>
+                            </div>
+                        )}
 
-                        <div className="card__settings">
-                            <p>Restaurant Secret ID</p>
-                            <div className="card__body"><InputMask mask="999 99999 9999999" value={secretID} onChange={e => setSecretID(e.target.value)} /></div>
-                            <span>Characters: {secretID.length ? secretID.length : '0'}</span>
-                        </div>
                         
 
                         {!hideButtons && (
                             <div className="card__buttonsWrapper">
-                                <button onClick={handleCancel} className="card__cancelButton">Cancel</button>
+                                <button onClick={handleCLear} className="card__cancelButton">Clear</button>
                                 <button type="submit" onClick={handleSave} className="card__saveButton">Save</button>
                             </div>
                          )}
