@@ -1,6 +1,8 @@
 import React from 'react'
 import './TableCard.css'
 import Notifications from './Notifications';
+import LocalMallIcon from '@material-ui/icons/LocalMall';
+import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 
 function TableCard({  }) {
   
@@ -18,14 +20,7 @@ function TableCard({  }) {
             </div>
             <div className="tableCard__container">
                 <Notifications order_type />
-                <div className="tableCard__nameAndEmail">
-                <div className="tableCard__name">
-                    <Notifications name />
-                </div>
-                <div className="tableCard__email">
-                    <Notifications email />
-                </div>
-                </div>
+                <Notifications nameAndEmail />
                 <Notifications sent_to />
                 <Notifications sent_from />
                 <Notifications date_sent />

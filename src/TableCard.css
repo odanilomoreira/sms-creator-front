@@ -15,13 +15,13 @@
     color: #EFEFEF;
     padding: 5px;
     padding-left: 1em;
-    justify-content: space-evenly;
-    flex-basis: 100%;
 }
 
 .tableCard__header > * {
+    display: flex;
     font-size: 12pt;
     flex-basis: 100%;
+    justify-content:space-around;
 }
 
 .tableCard__container {
@@ -29,8 +29,8 @@
     display: flex;
     flex: 1;
     padding: 5px;
-    padding-left: 1em;
-    justify-content: space-evenly;
+    padding-left: 0.3em;
+    justify-content: space-around;
 
 }
 
@@ -38,10 +38,6 @@
     flex-basis: 100%;
 }
 
-.tableCard__nameAndEmail {
-
-}
-
-.tableCard__nameAndEmail > * {
-
+.tableCard__name {
+    font-weight: bolder;
 }

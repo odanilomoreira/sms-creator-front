@@ -1,0 +1,50 @@
+.notifications {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.notifications > * {
+    display: flex;
+    max-height: 2.5em;
+    margin-top: 1em;
+    background-color: #f7f7f7;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    flex-basis: 100%;
+    justify-content:space-around;
+    
+}
+
+.notifications__log > span {
+    background-color: #e9797a;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 7px;
+    color: #EFEFEF;
+}
+
+.notifications__nameAndEmail {
+    display: flex;
+    flex-direction: column;
+}
+
+.notifications__nameAndEmail {
+    font-weight: bolder;
+}
+
+.notifications__nameAndEmail > span {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.notifications__orderType > .MuiSvgIcon-root {
+    background-color: #f7c976;
+    padding: 0.2em;
+    color: #f8f8f8;
+    font-size: 2.3em;
+    display: flex;
+    align-self: center;
+    margin-top: 0.4em;
+}
