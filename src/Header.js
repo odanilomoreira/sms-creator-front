@@ -13,10 +13,11 @@ function Header({ selected }) {
 
     const logout = e => {
         e.preventDefault()
-        localStorage.removeItem("access_token")
-        localStorage.removeItem("username")
-        localStorage.removeItem("email")
-        localStorage.removeItem("restaurant_id")
+        localStorage.clear()
+        // localStorage.removeItem("access_token")
+        // localStorage.removeItem("username")
+        // localStorage.removeItem("email")
+        // localStorage.removeItem("restaurant_id")
         history.replace('/login')
     }
   

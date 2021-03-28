@@ -16,7 +16,7 @@ function Settings() {
                     <Card 
                     cardTitle="Secret ID"
                     currentSecretID={localStorage.getItem('restaurant_id')}
-                    hideBody showSettings
+                    hideBody showSettings SettingsButtons
                     />
                     
                 </div>

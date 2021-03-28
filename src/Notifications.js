@@ -67,6 +67,7 @@ function Notifications({ length,
             {messages.length ?
                 <>
                 {length && messages.length}
+                
                 {order_type && messages.map((message, index) => <p className="notifications__orderType" key={index}>
                     {
                     message.order_type === 'Pickup' ? <LocalMallIcon /> : <MotorcycleIcon />
@@ -88,7 +89,9 @@ function Notifications({ length,
                 {users_ids && messages.map((message, index) => <p key={index}>{message.users_ids}</p>)} 
                 </>
             :
-                <p></p>
+                <>
+                {(length && !messages.length) ? 0 : ''}
+                </>
             }
         </div>
     )

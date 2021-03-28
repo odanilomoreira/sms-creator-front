@@ -47,4 +47,5 @@
     display: flex;
     align-self: center;
     margin-top: 0.4em;
+    border-radius: 3px;
 }
