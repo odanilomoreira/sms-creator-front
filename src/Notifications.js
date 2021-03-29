@@ -29,7 +29,8 @@ function Notifications({ length,
 
         if (localStorage.getItem("restaurant_id")){
 
-        fetch("http://localhost:4242/token", { method: "POST" })
+        // fetch("http://localhost:4242/token", { method: "POST" })
+        fetch("https://odanilomoreira.pythonanywhere.com/token", { method: "POST" })
           .then((res) => res.json())
           .then((data) => {
             

@@ -3,8 +3,11 @@ import { Link, useHistory } from 'react-router-dom'
 import './Register.css'
 import axios from 'axios'
 import pvmtLogo from './pvmt_logo.jpg'
+import vendorRegisterDesign from './vendorregister.png'
 
-const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+// const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+const api = axios.create({ baseURL: 'https://04e9421fbe6d.ngrok.io/' })
+
 
 function Register() {
     const history = useHistory()
@@ -12,6 +15,9 @@ function Register() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [restaurantID, setRestaurantID] = useState('')
+    const [error, setError] = useState('')
+
+    
 
     useEffect(() => {
         if (localStorage.getItem("access_token")) {
@@ -27,11 +33,10 @@ function Register() {
                                                     "email": email, 
                                                     "password": password,
                                                      "restaurant_id": restaurantID}, headers)
-            // console.log(res.data.access_token)
-            console.log(res)
-            history.push('/')
+            localStorage.setItem("email", email)
+            history.push('/thank-you')
         }catch (error) {
-            alert(error.response.data.message)
+            setError(error.response.data.message)
         }
         
     }
@@ -43,7 +48,8 @@ function Register() {
             </div>
             <div className="register__container">
                 <form>
-                    <h2>Vendor Register</h2>
+                    <img src={vendorRegisterDesign} />
+                    <p className="register__error">{error}</p>
                     <p>Username:</p>
                     <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
                     
@@ -57,6 +63,8 @@ function Register() {
                     <input type="password" value={restaurantID} onChange={e => setRestaurantID(e.target.value)} />
                                         
                     <button type='submit' onClick={signIn} className='register__signInButton'>register</button>
+
+                    <Link to='/login'><p className='register__login'>login</p></Link>
                     
                 </form>
             </div>

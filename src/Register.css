@@ -51,6 +51,10 @@
     opacity: 1;
 }
 
+.register__container > form > img {
+    width: 15em;
+}
+
 .register__container > form > a {
     display: flex;
     justify-content: center;
@@ -96,6 +100,16 @@
     margin-bottom: 74px;
     margin-top: 20px;
     width: 120px;
+}
+
+.register__login {
+    margin-top: 1em;
+    opacity: 0.5;
+    
+}
+
+.register__error {
+    color: #E65F60;
 }
 
 @media screen and (max-width: 1200px) {

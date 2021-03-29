@@ -9,6 +9,10 @@ import Settings from './Settings'
 import Register from './Register'
 import React, { useState } from 'react'
 import HistorySMS from './HistorySMS'
+import ThankYou from './ThankYou'
+import EmailConfirmed from './EmailConfirmed'
+import ResetPassword from './ResetPassword'
+import Forgot from './Forgot'
 
 function App() {
  
@@ -16,6 +20,18 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+        <Route path='/thank-you'>
+            <ThankYou />
+          </Route>
+          <Route path='/email-confirmed'>
+            <EmailConfirmed />
+          </Route>
+          <Route path='/reset-password'>
+            <ResetPassword />
+          </Route>
+          <Route path='/forgot'>
+            <Forgot />
+          </Route>
         <Route path='/register'>
             <Register />
           </Route>

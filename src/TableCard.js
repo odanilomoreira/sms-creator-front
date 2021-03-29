@@ -1,8 +1,6 @@
 import React from 'react'
 import './TableCard.css'
 import Notifications from './Notifications';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
-import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 
 function TableCard({  }) {
   

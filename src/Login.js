@@ -5,7 +5,9 @@ import vendorLogin from './vendor_login.jpg';
 import axios from 'axios'
 import pvmtLogo from './pvmt_logo.jpg'
 
-const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+// const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+
+const api = axios.create({ baseURL: 'https://04e9421fbe6d.ngrok.io/' })
 
 function Login() {
     const history = useHistory()
@@ -15,7 +17,7 @@ function Login() {
 
     useEffect(() => {
         if (localStorage.getItem("access_token")) {
-          history.push("/");
+          history.push("/thank-you");
         }
       }, [history])
     
@@ -39,11 +41,6 @@ function Login() {
         
     }
 
-    const forgot = e => {
-        e.preventDefault()
-        console.log('forgot')
-    }
-
     return (
         <div className='login'>
             <div className="login__header">
@@ -64,9 +61,11 @@ function Login() {
                     </div>
                     
                     <button type='submit' onClick={signIn} className='login__signInButton'>sign in</button>
+                    
                     <Link to='/forgot'>
-                        <span className="login__x-small" onClick={forgot}>Forgot your password?</span>
+                        <span className="login__x-small">Forgot your password?</span>
                     </Link>
+
                     <Link to='/register'>
                         <span className={`login__x-small login__register`}>Register</span>
                     </Link>

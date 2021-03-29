@@ -1,0 +1,36 @@
+.forgot {
+    background-color:  #0C2633;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    color: #EFEFEF;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.forgot__header {
+    display: flex;
+    background-color: #0C2633;
+}
+
+.forgot__header > img {
+    display: flex;
+    margin-left: -600px;
+    margin-bottom: 74px;
+    margin-top: 20px;
+    width: 120px;
+}
+
+@media screen and (max-width: 1200px) {
+    .forgot__header > img {
+        margin-left: -400px;
+    }
+  }
+
+
+@media screen and (max-width: 900px) {
+    .forgot__header > img {
+        margin-left: 0;
+    }
+  }

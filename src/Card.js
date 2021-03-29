@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import './Card.css'
 import axios from 'axios'
 
-const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+// const api = axios.create({ baseURL: 'http://127.0.0.1:5000' })
+const api = axios.create({ baseURL: 'https://04e9421fbe6d.ngrok.io/' })
+
 
 function Card({ cardTitle, 
                 bodyTitle, 
