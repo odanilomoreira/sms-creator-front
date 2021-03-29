@@ -8,6 +8,27 @@
     align-items: center;
 }
 
+.forgot__container > form > input {
+    display: flex;
+    background-color: #0C2633;
+    border: 1px solid #7E7E7E;
+    padding: 8px;
+    width: 96%;
+    color: #EFEFEF;
+    border-radius: 2px;
+}
+
+.forgot__container > form > img {
+    max-width: 25em;
+    margin-bottom: 1em;
+}
+
+.forgot__container > form > p {
+    color: #EFEFEF;
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+    font-size: 12pt;
+}
 
 .forgot__header {
     display: flex;
@@ -20,6 +41,24 @@
     margin-bottom: 74px;
     margin-top: 20px;
     width: 120px;
+}
+
+
+.forgot__container > form > button {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    color: #EFEFEF;
+    background-color: #7E7E7E;
+    margin-top: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    justify-content: center;
+    opacity: 0.9;
+}
+.forgot__container > form > button:hover {
+    opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {

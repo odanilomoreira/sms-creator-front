@@ -23,7 +23,7 @@ function App() {
         <Route path='/thank-you'>
             <ThankYou />
           </Route>
-          <Route path='/email-confirmed'>
+          <Route path='/email-confirmed/:userId'>
             <EmailConfirmed />
           </Route>
           <Route path='/reset-password'>

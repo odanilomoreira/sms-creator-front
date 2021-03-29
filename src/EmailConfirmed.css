@@ -8,6 +8,42 @@
     align-items: center;
 }
 
+.emailConfirmed__container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 0.5em;
+}
+
+.emailConfirmed__container > a {
+    margin-top: 1em;
+}
+
+.emailConfirmed__container > a > span {
+    opacity: 0.5;
+    
+}
+
+.emailConfirmed__message {
+    max-width: 30em;
+    border: 0.5px solid rgba(255,255,255,0.5);
+    padding: 1em;
+    color: #EFEFEF;
+}
+
+.emailConfirmed__message > h3 {
+    font-weight: 500;
+    font-size: 16pt;
+}
+
+.emailConfirmed__container > img {
+    justify-content: center;
+    max-width: 20em;
+    margin-bottom: 1em;
+}
+
+
+
 
 .emailConfirmed__header {
     display: flex;
